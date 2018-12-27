@@ -1,4 +1,4 @@
-type 'a withCounter = int -> 'a * int
+type 'a with_counter = int -> 'a * int
 
 
-val (>>=) : 'a withCounter -> ('a -> 'b withCounter) -> 'b withCounter
+val (>>=) : 'a with_counter -> ('a -> 'b with_counter) -> 'b with_counter
