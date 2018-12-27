@@ -29,7 +29,7 @@ let rec relabel (tree : 'a tree) (i : int) (*: 'a tree withCounter *) =
         let (r', i2) = relabel r i1 in 
         Node(r', l'), i2
 
-let (>>=) (f : 'a with_counter) (g : 'a -> 'b with_counter) : 'b with_counter =
+let (>>=) f g  =
     fun i -> 
     let (r, i') = f i in g r i'
 
